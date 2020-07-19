@@ -41,6 +41,13 @@ target_include_directories(libtaskman
         ${CMAKE_CURRENT_SOURCE_DIR}/src
 )
 
+find_package(Threads REQUIRED)
+
+target_link_libraries(libtaskman
+    PUBLIC
+        Threads::Threads
+)
+
 target_compile_options(libtaskman PRIVATE
     $<$<OR:$<CXX_COMPILER_ID:Clang>,$<CXX_COMPILER_ID:AppleClang>,$<CXX_COMPILER_ID:GNU>>:
     -Wall -Wextra -Wpedantic>)
