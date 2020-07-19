@@ -1,0 +1,13 @@
+# Ignore CMake build artifacts
+/build/
+
+# Ignore LaTeX build artifacts
+/doc/taskman.aux
+/doc/taskman.dvi
+/doc/taskman.log
+/doc/taskman.out
+/doc/taskman.toc
+/doc/taskman.pdf
+/doc/taskman.synctex.gz
+/doc/taskman-plantuml.latex
+/doc/taskman-plantuml.txt

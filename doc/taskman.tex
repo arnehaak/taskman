@@ -1,0 +1,70 @@
+% !TeX document-id = {d54a6c1c-7b56-418c-9a0d-0fbbfbe92d17}
+% !TeX TXS-program:compile = txs:///lualatex/[--shell-escape]
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[a4paper]{scrartcl}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{english}
+
+\title{Task Manager Exercise}
+\author{Arne Haak}
+
+% Pretty-printed source code
+\usepackage[cache=false]{minted}
+
+% UML diagrams
+\usepackage{plantuml}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Dies ist die Zusammenfassung dieses Dokuments. Daher dieses Dokument nur zu Testzwecken dient, fällt die Zusammenfassung entsprechend kurz aus.
+\end{abstract}
+
+\tableofcontents
+
+\section{Ein erster Abschnitt}
+
+
+\begin{minted}{cpp}
+DataType & at(size_t idxX, size_t idxY)
+{
+  return storage[idxY * sizeX + idxX];
+}
+\end{minted}
+
+\subsection{Unterabschnitt}
+
+\begin{plantuml}
+@startuml
+hide circle
+skinparam classAttributeIconSize 0
+
+class Circle {
+- radius : double 
+- center : Point 
++ setRadius(radius : double) : void
++ setCenter(center : Point) : void
++ getArea() : double
++ getCircumference() : double
+}
+@enduml
+\end{plantuml}
+
+\subsubsection{Unter-Unterabschnitt}
+
+\paragraph{Eine weitere Überschrift}
+
+\subparagraph{Noch eine kleinere Überschrift}
+
+\subsection{Weiterer Unterabschnitt}
+
+\subsubsection{Unter-Unterabschnitt}
+
+Dies ist ein Beispieldokument.
+
+\end{document}
