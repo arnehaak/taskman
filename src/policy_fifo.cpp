@@ -6,7 +6,7 @@
 namespace taskman {
 
 
-std::optional<os::Process::PID> PolicyFIFO::getPidToKill(os::Process const & newProcess) const {
+std::optional<os::Process::PID> PolicyFIFO::getPidToKill(os::Process const &) const {
 
   // Determine the PID of the oldest process
   std::optional<os::Process::PID> retVal = std::nullopt;

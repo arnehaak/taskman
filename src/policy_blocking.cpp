@@ -5,7 +5,7 @@
 namespace taskman {
 
 
-std::optional<os::Process::PID> PolicyBlocking::getPidToKill(os::Process const & newProcess) const
+std::optional<os::Process::PID> PolicyBlocking::getPidToKill(os::Process const &) const
 {
   return std::nullopt;
 }
@@ -17,7 +17,7 @@ void PolicyBlocking::trackProcess(os::Process const &)
 }
 
 
-void PolicyBlocking::untrackPids(std::vector<os::Process::PID> const & pids)
+void PolicyBlocking::untrackPids(std::vector<os::Process::PID> const &)
 {
   // Nothing to do
 }
